@@ -14,13 +14,13 @@ import javax.sql.DataSource;
 @ComponentScan("ua.com.euniversity.repository")
 public class DataSourceConfig {
 
-    @Value("${datasource.url}")
+    @Value("${app.dataSource.postgres.jdbc-url}")
     private String datasourceUrl;
 
-    @Value("${datasource.username}")
+    @Value("${app.dataSource.postgres.username}")
     private String datasourceUsername;
 
-    @Value("${datasource.password}")
+    @Value("${app.dataSource.postgres.password}")
     private String datasourcePassword;
 
     @Bean

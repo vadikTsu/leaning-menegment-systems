@@ -1,12 +1,19 @@
-package ua.com.euniversity.model;
+package ua.com.euniversity.domain.student;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
+@EqualsAndHashCode(of = "id")
 public class Student {
-    private String uniqueId;
+
+    private int id;
+
     private String firstName;
+
     private String lastName;
+
     private int groupId;
 }

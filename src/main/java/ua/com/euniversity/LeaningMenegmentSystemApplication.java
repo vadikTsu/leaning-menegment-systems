@@ -8,6 +8,7 @@ public class LeaningMenegmentSystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LeaningMenegmentSystemApplication.class, args);
+
 	}
 
 }

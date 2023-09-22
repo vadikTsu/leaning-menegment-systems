@@ -1,7 +1,6 @@
-package ua.com.euniversity.model.mapper;
+package ua.com.euniversity.domain.student;
 
 import org.springframework.jdbc.core.RowMapper;
-import ua.com.euniversity.model.Student;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +11,7 @@ public class StudentRowMapper implements RowMapper<Student> {
     public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
         Student student = new Student();
 
-        student.setUniqueId(rs.getString("uid"));
+        student.setId(rs.getInt("student_id"));
         student.setFirstName(rs.getString("first_name"));
         student.setLastName(rs.getString("last_name"));
         student.setGroupId(rs.getInt("group_id"));

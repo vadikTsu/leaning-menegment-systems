@@ -1,7 +1,7 @@
-package ua.com.euniversity.model.mapper;
+package ua.com.euniversity.domain.group;
 
 import org.springframework.jdbc.core.RowMapper;
-import ua.com.euniversity.model.Group;
+import ua.com.euniversity.domain.group.Group;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +12,7 @@ public class GroupRowMapper implements RowMapper<Group> {
     public Group mapRow(ResultSet rs, int rowNum) throws SQLException {
         Group group = new Group();
 
-        group.setGroupId(rs.getInt("uid"));
+        group.setId(rs.getInt("group_id"));
         group.setGroupName(rs.getString("group_name"));
 
         return group;
